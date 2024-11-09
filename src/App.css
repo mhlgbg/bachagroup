@@ -1,0 +1,51 @@
+/* App.css */
+
+/* Background của toàn trang */
+.page-background {
+  background-color: white;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 100px; /* Đặt khoảng cách bằng chiều cao của navbar */
+}
+
+.content-container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #ecebf1;
+}
+
+/* Media query cho màn hình nhỏ hơn */
+@media (max-width: 768px) {
+  .content-container {
+    width: 100%; /* Chiếm toàn bộ chiều rộng màn hình */
+    padding: 10px; /* Giảm padding trên màn hình nhỏ */
+  }
+  
+  /* Đảm bảo ảnh co lại trên màn hình nhỏ */
+  img {
+    max-width: 100%; /* Đảm bảo ảnh không vượt quá chiều rộng của container */
+    height: auto; /* Giữ tỷ lệ ảnh */
+  }
+
+  /* Đặt lại kích thước các cột hoặc lưới */
+  .article-item {
+    flex-direction: column; /* Chuyển ảnh và nội dung thành cột dọc */
+    align-items: flex-start;
+  }
+
+  .article-image {
+    margin-bottom: 10px; /* Thêm khoảng cách giữa ảnh và nội dung */
+    width: 100%;
+  }
+
+  .article-details {
+    text-align: left;
+    width: 100%;
+  }
+}
+
+/* Styles cho nút */
+.contact-submit-btn {
+  width: 100%; /* Đặt chiều rộng nút full width */
+}

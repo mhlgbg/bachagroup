@@ -1,0 +1,81 @@
+/* NavigationBar.css */
+
+/* Căn chỉnh logo với chiều cao 160px và chiều rộng tự động */
+.navbar-logo {
+    height: 80px;
+    width: auto;
+    padding-left: 35px;
+}
+
+/* Màu nền bao phủ toàn bộ màn hình */
+.custom-navbar-container {
+    background-color: #FFFFFF;
+    width: 100%;
+    padding: 0;
+    position: fixed; /* Giữ navbar cố định ở đầu trang */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Đảm bảo thanh navbar nằm trên các phần tử khác */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tạo bóng để làm nổi bật */
+}
+
+/* Đặt nội dung banner giới hạn ở 1200px và căn giữa */
+.custom-navbar {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* Căn giữa các menu */
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    width: calc(100% - 160px); /* Trừ đi phần của logo */
+}
+
+/* Màu chữ cho các link */
+.nav-link {
+    color: #2828e2 !important;
+    font-size: 1.2rem !important;
+    font-weight: 500 !important;
+    padding: 0 15px !important;
+}
+
+/* Màu chữ khi hover */
+.nav-link:hover {
+    color: #00a8cc !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    /* Giảm kích thước logo trên màn hình nhỏ */
+    .navbar-logo {
+        height: 100px;
+        width: auto;
+    }
+
+    /* Đặt thanh navbar full-width và không giới hạn ở 1200px */
+    .custom-navbar {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    /* Căn chỉnh lại các menu cho màn hình nhỏ */
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    /* Điều chỉnh kích thước và khoảng cách các link menu trên màn hình nhỏ */
+    .nav-link {
+        font-size: 1rem !important;
+        padding: 10px 0 !important;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Đảm bảo thanh navbar mở rộng toàn màn hình trên thiết bị nhỏ */
+    .custom-navbar-container {
+        padding: 0;
+    }
+}
